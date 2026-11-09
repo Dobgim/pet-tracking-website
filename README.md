@@ -57,6 +57,9 @@ A pet-travel and live pet-tracking demo website built with **React**, **Vite**, 
 | Path | Page |
 |---|---|
 | `/` | Home |
+| `/services` | All services overview |
+| `/how-it-works` | How it works |
+| `/track` | Live pet tracking lookup |
 | `/services/air` · `/road` · `/international` · `/paperwork` · `/quarantine` · `/boarding` · `/crates` | Service pages, all built from one template (`src/pages/ServicePage.jsx`) |
 | `/pricing` | Pricing plans and add-ons |
 | `/locations` | Hubs and partner network |

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import PromiseBar from './components/PromiseBar'
@@ -17,6 +17,7 @@ import ServicePage from './pages/ServicePage'
 import { Pricing, Locations, Industries, About } from './pages/InfoPages'
 import { Careers, Blog, BlogPost, Faq, Reunions, Contact, NotFound } from './pages/CompanyPages'
 import { SERVICES } from './pages/content'
+import { ServicesIndex, HowItWorksPage, TrackPage } from './pages/HubPages'
 
 function InnerPage({ path, onOpenQuote, onOpenTrack }) {
   const props = { onOpenQuote, onOpenTrack }
@@ -25,13 +26,19 @@ function InnerPage({ path, onOpenQuote, onOpenTrack }) {
   const post = path.match(/^\/blog\/([\w-]+)$/)
   if (post) return <BlogPost key={post[1]} slug={post[1]} {...props} />
   const pages = { '/pricing': Pricing, '/locations': Locations, '/industries': Industries, '/about': About, '/careers': Careers,
-    '/blog': Blog, '/faq': Faq, '/reunions': Reunions, '/contact': Contact }
+    '/blog': Blog, '/services': ServicesIndex, '/how-it-works': HowItWorksPage, '/track': TrackPage, '/faq': Faq, '/reunions': Reunions, '/contact': Contact }
   const Page = pages[path] || NotFound
   return <Page {...props} />
 }
 
 export default function App() {
   const path = usePath()
+  // Every route opens at the top of the page (unless the URL targets a section)
+  useLayoutEffect(() => {
+    if (!window.location.hash || window.location.hash.startsWith('#/')) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }
+  }, [path])
   useEffect(() => {
     if (path === '/') document.title = 'PawPath Pet Travel | Pet Transport and Live Pet Tracking'
   }, [path])

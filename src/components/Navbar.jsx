@@ -145,7 +145,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                       <a href="/industries" onClick={() => setServicesOpen(false)} className="text-soft hover:text-coral">
                         Who we help
                       </a>
-                      <a href="/#services" onClick={() => setServicesOpen(false)} className="text-teal hover:text-coral">
+                      <a href="/services" onClick={() => setServicesOpen(false)} className="text-teal hover:text-coral">
                         All services &rarr;
                       </a>
                     </div>
@@ -153,7 +153,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 )}
               </div>
 
-              <a href="/#track" className="hover:text-coral-light transition-colors py-2 px-1">
+              <a href="/track" className="hover:text-coral-light transition-colors py-2 px-1">
                 Track
               </a>
               <a href="/pricing" className="hover:text-coral-light transition-colors py-2 px-1">
@@ -320,7 +320,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 Home
               </a>
               <a
-                href="/#track"
+                href="/track"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-ink hover:text-coral transition-colors"
               >

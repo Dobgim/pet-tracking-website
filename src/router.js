@@ -13,8 +13,9 @@ export function navigate(to) {
   if (url.hash && url.hash.length > 1 && !url.hash.startsWith('#/')) {
     // let the new page render, then scroll to the anchor
     setTimeout(() => document.getElementById(url.hash.slice(1))?.scrollIntoView({ behavior: samePage ? 'smooth' : 'auto' }), samePage ? 0 : 60)
-  } else {
-    window.scrollTo(0, 0)
+  } else if (samePage) {
+    // re-clicking the current page's link returns to its top
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }
 }
 

@@ -62,7 +62,7 @@ export default function Hero({ onOpenQuote, onOpenTrack }) {
               </button>
 
               <a
-                href="/#how"
+                href="/how-it-works"
                 className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/35 backdrop-blur-md font-heading font-extrabold text-[15px] md:text-[16px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-full transition-all duration-200"
               >
                 How it works

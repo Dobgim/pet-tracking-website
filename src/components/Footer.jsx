@@ -63,7 +63,7 @@ export default function Footer({ onOpenQuote }) {
               Company
             </h4>
             <ul className="space-y-2.5 text-[14px] text-white/80 font-sans">
-              <li><a href="/#how" className="hover:text-white transition-colors">How it works</a></li>
+              <li><a href="/how-it-works" className="hover:text-white transition-colors">How it works</a></li>
               <li><a href="/industries" className="hover:text-white transition-colors">Who we help</a></li>
               <li><a href="/pricing" className="hover:text-white transition-colors">Pricing</a></li>
               <li><a href="/locations" className="hover:text-white transition-colors">Locations</a></li>
