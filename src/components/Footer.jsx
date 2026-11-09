@@ -25,7 +25,7 @@ export default function Footer({ onOpenQuote }) {
           
           {/* Column 1: Brand & Contact Info */}
           <div className="space-y-5">
-            <a href="#top" className="flex items-center gap-2.5 text-white no-underline group select-none">
+            <a href="/" className="flex items-center gap-2.5 text-white no-underline group select-none">
               <span className="w-11 h-11 rounded-full bg-coral grid place-items-center flex-none shadow-md">
                 <PawIcon className="w-6 h-6 fill-white" />
               </span>
@@ -63,13 +63,13 @@ export default function Footer({ onOpenQuote }) {
               Company
             </h4>
             <ul className="space-y-2.5 text-[14px] text-white/80 font-sans">
-              <li><a href="#how" className="hover:text-white transition-colors">How it works</a></li>
-              <li><a href="#who" className="hover:text-white transition-colors">Who we help</a></li>
-              <li><a href="#quote" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#track" className="hover:text-white transition-colors">Locations</a></li>
-              <li><a href="#how" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#reviews" className="hover:text-white transition-colors">Happy reunions</a></li>
-              <li><a href="#how" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="/#how" className="hover:text-white transition-colors">How it works</a></li>
+              <li><a href="/industries" className="hover:text-white transition-colors">Who we help</a></li>
+              <li><a href="/pricing" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/locations" className="hover:text-white transition-colors">Locations</a></li>
+              <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="/reunions" className="hover:text-white transition-colors">Happy reunions</a></li>
+              <li><a href="/careers" className="hover:text-white transition-colors">Careers</a></li>
             </ul>
           </div>
 
@@ -79,11 +79,11 @@ export default function Footer({ onOpenQuote }) {
               Services
             </h4>
             <ul className="space-y-2.5 text-[14px] text-white/80 font-sans">
-              <li><a href="#services" className="hover:text-white transition-colors">Pet air travel</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Door to door by road</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">International pet relocation</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Vet and travel paperwork</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Boarding and layover care</a></li>
+              <li><a href="/services/air" className="hover:text-white transition-colors">Pet air travel</a></li>
+              <li><a href="/services/road" className="hover:text-white transition-colors">Door to door by road</a></li>
+              <li><a href="/services/international" className="hover:text-white transition-colors">International pet relocation</a></li>
+              <li><a href="/services/paperwork" className="hover:text-white transition-colors">Vet and travel paperwork</a></li>
+              <li><a href="/services/boarding" className="hover:text-white transition-colors">Boarding and layover care</a></li>
             </ul>
           </div>
 
@@ -129,8 +129,8 @@ export default function Footer({ onOpenQuote }) {
           <span>&copy; 2026 PawPath Pet Travel (demo project, not a real service). All rights reserved.</span>
 
           <div className="flex items-center gap-6">
-            <a href="#contact" className="hover:text-white transition-colors">Privacy policy</a>
-            <a href="#contact" className="hover:text-white transition-colors">Terms of service</a>
+            <a href="/contact" className="hover:text-white transition-colors">Privacy policy</a>
+            <a href="/contact" className="hover:text-white transition-colors">Terms of service</a>
             <a href="#/admin" className="hover:text-white transition-colors">Staff login</a>
           </div>
 

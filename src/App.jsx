@@ -12,8 +12,30 @@ import Footer from './components/Footer'
 import FloatingContact from './components/FloatingContact'
 import TrackModal from './components/TrackModal'
 import QuoteModal from './components/QuoteModal'
+import { usePath } from './router'
+import ServicePage from './pages/ServicePage'
+import { Pricing, Locations, Industries, About } from './pages/InfoPages'
+import { Careers, Blog, BlogPost, Faq, Reunions, Contact, NotFound } from './pages/CompanyPages'
+import { SERVICES } from './pages/content'
+
+function InnerPage({ path, onOpenQuote, onOpenTrack }) {
+  const props = { onOpenQuote, onOpenTrack }
+  const svc = path.match(/^\/services\/([\w-]+)$/)
+  if (svc) return SERVICES.some((x) => x.slug === svc[1]) ? <ServicePage key={svc[1]} slug={svc[1]} {...props} /> : <NotFound />
+  const post = path.match(/^\/blog\/([\w-]+)$/)
+  if (post) return <BlogPost key={post[1]} slug={post[1]} {...props} />
+  const pages = { '/pricing': Pricing, '/locations': Locations, '/industries': Industries, '/about': About, '/careers': Careers,
+    '/blog': Blog, '/faq': Faq, '/reunions': Reunions, '/contact': Contact }
+  const Page = pages[path] || NotFound
+  return <Page {...props} />
+}
 
 export default function App() {
+  const path = usePath()
+  useEffect(() => {
+    if (path === '/') document.title = 'PawPath Pet Travel | Pet Transport and Live Pet Tracking'
+  }, [path])
+
   const [trackModalOpen, setTrackModalOpen] = useState(false)
   const [activeTrackingCode, setActiveTrackingCode] = useState('')
   const [quoteModalOpen, setQuoteModalOpen] = useState(false)
@@ -42,6 +64,10 @@ export default function App() {
       />
 
       <main>
+        {path !== '/' ? (
+          <InnerPage path={path} onOpenQuote={handleOpenQuote} onOpenTrack={handleOpenTrack} />
+        ) : (
+        <>
         {/* Hero Section with Pet Card */}
         <Hero 
           onOpenQuote={handleOpenQuote}
@@ -74,6 +100,8 @@ export default function App() {
 
         {/* Full-width Quote Form Banner */}
         <QuoteBanner />
+        </>
+        )}
       </main>
 
       {/* Footer */}

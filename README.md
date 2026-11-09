@@ -52,6 +52,26 @@ A pet-travel and live pet-tracking demo website built with **React**, **Vite**, 
 
 ---
 
+## 🗺️ Pages
+
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/services/air` · `/road` · `/international` · `/paperwork` · `/quarantine` · `/boarding` · `/crates` | Service pages, all built from one template (`src/pages/ServicePage.jsx`) |
+| `/pricing` | Pricing plans and add-ons |
+| `/locations` | Hubs and partner network |
+| `/industries` | Who we help |
+| `/about` | Story, values, team |
+| `/careers` | Open roles |
+| `/blog`, `/blog/:slug` | Articles |
+| `/faq` | Grouped FAQ |
+| `/reunions` | Customer stories |
+| `/contact` | Contact form (messages arrive in the admin under Quote requests) |
+
+The copy for every page lives in `src/pages/content.js`. Routing uses the History API (`src/router.js`), so the host has to send every path to `index.html`. `vercel.json` (Vercel) and `public/_redirects` (Netlify) already handle this.
+
+---
+
 ## 🔐 Admin Dashboard
 
 Open **`/#/admin`** (or click **Staff login** in the footer).

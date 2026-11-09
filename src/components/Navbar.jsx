@@ -48,7 +48,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
             }`}
           >
             {/* Logo */}
-            <a href="#top" className="flex items-center gap-2.5 text-white no-underline group select-none">
+            <a href="/" className="flex items-center gap-2.5 text-white no-underline group select-none">
               <span className="w-10 h-10 rounded-full bg-coral grid place-items-center flex-none shadow-md group-hover:scale-105 transition-transform">
                 <PawIcon className="w-5 h-5 fill-white" />
               </span>
@@ -85,7 +85,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                   <div className="absolute top-[calc(100%+14px)] -left-4 w-[310px] bg-white text-ink rounded-2xl p-2.5 shadow-2xl border border-[#f3ece3] z-50 animate-in fade-in zoom-in-95 duration-150">
                     <div className="space-y-1">
                       <a
-                        href="#services"
+                        href="/services/air"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -93,7 +93,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">In cabin and pet air cargo</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/road"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -101,7 +101,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Climate-controlled pet vans</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/international"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -109,7 +109,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Moving abroad with your pet</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/paperwork"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -117,7 +117,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Health certificates and permits</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/quarantine"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -125,7 +125,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Arrival rules handled for you</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/boarding"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -133,7 +133,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Safe stays between legs</small>
                       </a>
                       <a
-                        href="#services"
+                        href="/services/crates"
                         onClick={() => setServicesOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -142,10 +142,10 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                       </a>
                     </div>
                     <div className="flex justify-between items-center border-t border-[#f7f1ea] mt-2 pt-2 px-2 text-[13px] font-semibold">
-                      <a href="#who" onClick={() => setServicesOpen(false)} className="text-soft hover:text-coral">
+                      <a href="/industries" onClick={() => setServicesOpen(false)} className="text-soft hover:text-coral">
                         Who we help
                       </a>
-                      <a href="#services" onClick={() => setServicesOpen(false)} className="text-teal hover:text-coral">
+                      <a href="/#services" onClick={() => setServicesOpen(false)} className="text-teal hover:text-coral">
                         All services &rarr;
                       </a>
                     </div>
@@ -153,13 +153,13 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 )}
               </div>
 
-              <a href="#track" className="hover:text-coral-light transition-colors py-2 px-1">
+              <a href="/#track" className="hover:text-coral-light transition-colors py-2 px-1">
                 Track
               </a>
-              <a href="#quote" className="hover:text-coral-light transition-colors py-2 px-1">
+              <a href="/pricing" className="hover:text-coral-light transition-colors py-2 px-1">
                 Pricing
               </a>
-              <a href="#track" className="hover:text-coral-light transition-colors py-2 px-1">
+              <a href="/locations" className="hover:text-coral-light transition-colors py-2 px-1">
                 Locations
               </a>
 
@@ -186,7 +186,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                   <div className="absolute top-[calc(100%+14px)] -left-4 w-[260px] bg-white text-ink rounded-2xl p-2.5 shadow-2xl border border-[#f3ece3] z-50 animate-in fade-in zoom-in-95 duration-150">
                     <div className="space-y-1">
                       <a
-                        href="#how"
+                        href="/about"
                         onClick={() => setCompanyOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -194,7 +194,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Our story and team</small>
                       </a>
                       <a
-                        href="#how"
+                        href="/careers"
                         onClick={() => setCompanyOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -202,7 +202,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Open roles</small>
                       </a>
                       <a
-                        href="#how"
+                        href="/blog"
                         onClick={() => setCompanyOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -210,7 +210,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Pet travel guides</small>
                       </a>
                       <a
-                        href="#how"
+                        href="/faq"
                         onClick={() => setCompanyOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -218,7 +218,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                         <small className="block text-[12px] text-soft font-normal">Answers to common questions</small>
                       </a>
                       <a
-                        href="#reviews"
+                        href="/reunions"
                         onClick={() => setCompanyOpen(false)}
                         className="block px-3.5 py-2 rounded-xl hover:bg-[#fff8f1] transition-colors"
                       >
@@ -230,7 +230,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 )}
               </div>
 
-              <a href="#contact" className="hover:text-coral-light transition-colors py-2 px-1">
+              <a href="/contact" className="hover:text-coral-light transition-colors py-2 px-1">
                 Contact
               </a>
             </nav>
@@ -238,7 +238,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
             {/* Right CTAs */}
             <div className="flex items-center gap-3 sm:gap-4">
               <a
-                href="#contact"
+                href="#/admin"
                 className="hidden sm:inline-block text-[15px] font-heading font-bold text-white hover:text-coral-light transition-colors px-2 py-1"
               >
                 Sign in
@@ -273,7 +273,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
           <div className="max-w-[560px] mx-auto px-5 py-6 space-y-6">
             {/* Top Bar with Logo & Close */}
             <div className="flex items-center justify-between">
-              <a href="#top" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5">
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5">
                 <span className="w-10 h-10 rounded-full bg-coral grid place-items-center flex-none">
                   <PawIcon className="w-5 h-5 fill-white" />
                 </span>
@@ -313,35 +313,35 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
             {/* Main Menu Links */}
             <div className="divide-y divide-ink/10 border-t border-ink/10">
               <a
-                href="#top"
+                href="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-coral"
               >
                 Home
               </a>
               <a
-                href="#track"
+                href="/#track"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-ink hover:text-coral transition-colors"
               >
                 Track your pet
               </a>
               <a
-                href="#quote"
+                href="/pricing"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-ink hover:text-coral transition-colors"
               >
                 Pricing
               </a>
               <a
-                href="#track"
+                href="/locations"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-ink hover:text-coral transition-colors"
               >
                 Locations
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-3 text-[19px] font-heading font-bold text-ink hover:text-coral transition-colors"
               >
@@ -355,56 +355,56 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 Services
               </small>
               <a
-                href="#services"
+                href="/services/air"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Pet air travel
               </a>
               <a
-                href="#services"
+                href="/services/road"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Door to door by road
               </a>
               <a
-                href="#services"
+                href="/services/international"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 International relocation
               </a>
               <a
-                href="#services"
+                href="/services/paperwork"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Vet & paperwork
               </a>
               <a
-                href="#services"
+                href="/services/quarantine"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Quarantine support
               </a>
               <a
-                href="#services"
+                href="/services/boarding"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Boarding care
               </a>
               <a
-                href="#services"
+                href="/services/crates"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Crates & prep
               </a>
               <a
-                href="#who"
+                href="/industries"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
@@ -418,35 +418,35 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
                 Company
               </small>
               <a
-                href="#how"
+                href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 About us
               </a>
               <a
-                href="#how"
+                href="/careers"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Careers
               </a>
               <a
-                href="#how"
+                href="/blog"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 Blog
               </a>
               <a
-                href="#how"
+                href="/faq"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
                 FAQ
               </a>
               <a
-                href="#reviews"
+                href="/reunions"
                 onClick={() => setMobileMenuOpen(false)}
                 className="col-span-2 text-[14.5px] font-medium text-ink hover:text-coral py-1"
               >
@@ -457,7 +457,7 @@ export default function Navbar({ onOpenQuote, onOpenTrack }) {
             {/* Mobile Actions */}
             <div className="grid grid-cols-2 gap-3 pt-3">
               <a
-                href="#contact"
+                href="#/admin"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-center py-3 bg-white border border-[#ddd6cb] text-ink font-heading font-bold rounded-full text-center"
               >
