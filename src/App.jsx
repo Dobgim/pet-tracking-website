@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import PromiseBar from './components/PromiseBar'
@@ -22,6 +22,12 @@ export default function App() {
     setActiveTrackingCode(code || 'PPT-84SW-AR8D-QK3Z')
     setTrackModalOpen(true)
   }
+
+  // Deep link from the admin dashboard: #/?track=PPT-XXXX-XXXX-XXXX
+  useEffect(() => {
+    const m = window.location.hash.match(/track=([A-Za-z0-9-]+)/)
+    if (m) handleOpenTrack(m[1])
+  }, [])
 
   const handleOpenQuote = () => {
     setQuoteModalOpen(true)

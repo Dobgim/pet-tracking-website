@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { addQuote } from '../lib/store'
 
 export default function QuoteBanner() {
   const [service, setService] = useState('air')
@@ -10,6 +11,7 @@ export default function QuoteBanner() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    addQuote({ name: "Website visitor", email: "", phone: "", service, petType: "", weight, from: fromCity, to: toCity, source: "Homepage quote banner" })
     setSubmitted(true)
   }
 

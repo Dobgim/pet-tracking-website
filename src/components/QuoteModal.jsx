@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PawIcon from './PawIcon'
+import { addQuote } from '../lib/store'
 import { X, CheckCircle2, ArrowRight } from 'lucide-react'
 
 export default function QuoteModal({ isOpen, onClose }) {
@@ -17,6 +18,7 @@ export default function QuoteModal({ isOpen, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    addQuote({ name, email, phone, service, petType, weight, from: fromCity, to: toCity, source: "Quote modal" })
     setSubmitted(true)
   }
 

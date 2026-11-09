@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PawIcon from './PawIcon'
+import { addSubscriber } from '../lib/store'
 import { ArrowUpRight, Phone, Mail } from 'lucide-react'
 
 export default function Footer({ onOpenQuote }) {
@@ -9,6 +10,7 @@ export default function Footer({ onOpenQuote }) {
   const handleSubscribe = (e) => {
     e.preventDefault()
     if (email) {
+      addSubscriber(email)
       setSubscribed(true)
       setEmail('')
     }
@@ -129,6 +131,7 @@ export default function Footer({ onOpenQuote }) {
           <div className="flex items-center gap-6">
             <a href="#contact" className="hover:text-white transition-colors">Privacy policy</a>
             <a href="#contact" className="hover:text-white transition-colors">Terms of service</a>
+            <a href="#/admin" className="hover:text-white transition-colors">Staff login</a>
           </div>
 
           <span className="text-white/60">

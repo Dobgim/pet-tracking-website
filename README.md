@@ -52,6 +52,29 @@ A pet-travel and live pet-tracking demo website built with **React**, **Vite**, 
 
 ---
 
+## 🔐 Admin Dashboard
+
+Open **`/#/admin`** (or click **Staff login** in the footer).
+
+| | |
+|---|---|
+| **Email** | `admin@pawpath.example` |
+| **Password** | `PawPath@2026` |
+
+You can change these under **Settings → Admin sign-in**.
+
+**What it does**
+
+- **Overview**: shows active shipments, pets on the move, new quote requests and booked revenue. It also has a weekly revenue chart, a breakdown by status, an on-hold alert and an activity feed.
+- **Shipments**: search and filter by status, export to CSV, and create or edit shipments (pet, owner, route, service, carrier, status, progress, ETA, price, photo). Each shipment gets an auto-generated `PPT-XXXX-XXXX-XXXX` tracking code. Updates you post from a shipment's detail panel appear right away on the public tracking page.
+- **Quote requests**: everything sent from the site's quote forms. You can add notes, mark a request contacted or declined, or turn it into a shipment in one click.
+- **Newsletter**: sign-ups from the footer, with CSV export.
+- **Settings**: company contact details (the coordinator phone appears on the tracking page), admin credentials, and a demo data reset.
+
+> **Data and security note:** this is a frontend-only demo. Data lives in the browser's `localStorage` (see `src/lib/store.js`), and sign-in is checked in the browser against a SHA-256 hash. That's fine for a demo, but it is **not** real security. Before using this in production, move `src/lib/store.js` onto a real backend (Supabase, Firebase or your own API) with server-side authentication.
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Install Dependencies
@@ -79,6 +102,8 @@ Generates the optimized production build in `dist/`.
 ├── public/
 │   ├── assets/img/             # Local images (pt-air, pt-hero-m, pt-reunion, etc.)
 ├── src/
+│   ├── lib/store.js            # Shared data store (shipments, quotes, subscribers, auth)
+│   ├── admin/                  # Admin dashboard (Login, Overview, Shipments, Quotes, Settings)
 │   ├── components/
 │   │   ├── PawIcon.jsx         # Signature Paw print SVG icon
 │   │   ├── Navbar.jsx          # Glass navbar + dropdowns + mobile drawer
