@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.local
+happytailpettravels.com/
+fonts.googleapis.com/
+fonts.gstatic.com/
+public/storage/
+public/assets/img/icon-64.png
